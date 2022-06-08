@@ -1,0 +1,24 @@
+function updateFunc() {
+        	let id = document.getElementsByName("j_id")[0].value;
+        	let inputType = document.getElementsByName("j_type")[0].value;
+            let inputMat = document.getElementsByName("j_material")[0].value;
+            let inputCost = document.getElementsByName("j_cost")[0].value;
+			let inputImage = document.getElementsByName("j_image")[0].value;
+        	fetch("http://localhost:9002/update/"+id, { 
+        	    method: 'put', 
+        	    headers: {
+        	      "Content-type": "application/json" 
+        	    },
+        	    body: JSON.stringify(
+        	      {
+        	        "type": inputType,
+        	        "material": inputMat,
+        	        "cost": inputCost,
+					"image": inputImage
+        	      }
+        	    )
+        	  })
+        	  .then(res => res.json())
+        	  .then((data) => console.log(`Request succeeded with JSON response ${data}`))
+    		  .catch((error) => console.log(`Request failed ${error}`))
+        	  }

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Amend Database</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=, initial-scale=1.0">
+<script src="Update/Update.js"></script>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+</head>
+<body>
+	<style>
+form {
+	background-size: cover;
+	background-color: lightblue;
+	text-align: center;
+}
+</style>
+	<form>
+		<h1>Update Database Entry:</h1>
+		<fieldset>
+			<legend>Enter Database ID to amend</legend>
+			<label for="type">ID</label> <input id="furniture_id" type="id"
+				name="f_id"> </br>
+			<legend>Enter new data here:</legend>
+			<label for="type">Jewellery Type</label> <input id="jewellery_type"
+				type="text" name="j_type"> </br> <label for="material">Jewellery
+				Material</label> <input type="material" id="jewellery_material"
+				name="j_material" /> </br> <label for="cost">Retail Price</label> <input
+				type="cost" id="jewellery_cost" name="j_cost" /> </br>
+				<label for="image">Image Location</label> <input
+				type="image" id="jewellery_image" name="j_image" /> </br>
+
+		</fieldset>
+		<input type="button" onclick="updateFunc()"
+			value="Click here to update data in database!">
+	</form>
+
+</body>
+</html>
